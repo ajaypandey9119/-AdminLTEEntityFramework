@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdminLTENewEntityModelStoreContainer" CdmEntityContainer="AdminLTENewEntityEntities">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="AdminLTENewEntityModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeGender" ColumnName="EmployeeGender" />
+          <ScalarProperty Name="EmployeeDesignation" ColumnName="EmployeeDesignation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spDeleteEmployee" FunctionName="AdminLTENewEntityModel.Store.spDeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="spGetAllEmployees" FunctionName="AdminLTENewEntityModel.Store.spGetAllEmployees" />
+    <FunctionImportMapping FunctionImportName="spInsertEmployeeDetails" FunctionName="AdminLTENewEntityModel.Store.spInsertEmployeeDetails" />
+    <FunctionImportMapping FunctionImportName="spUpdateEmployee" FunctionName="AdminLTENewEntityModel.Store.spUpdateEmployee" />
+  </EntityContainerMapping>
+</Mapping>

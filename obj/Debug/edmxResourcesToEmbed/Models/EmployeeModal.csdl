@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdminLTENewEntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmployeeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeGender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeDesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="EmployeeDBModal" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <FunctionImport Name="spDeleteEmployee">
+      <Parameter Name="EmployeeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spGetAllEmployees" ReturnType="Collection(AdminLTENewEntityModel.spGetAllEmployees_Result)" />
+    <FunctionImport Name="spInsertEmployeeDetails" EntitySet="Employees" ReturnType="Collection(AdminLTENewEntityModel.Employee)">
+      <Parameter Name="EmployeeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="spUpdateEmployee">
+      <Parameter Name="EmployeeID" Mode="In" Type="Int32" />
+      <Parameter Name="EmployeeName" Mode="In" Type="String" />
+      <Parameter Name="EmployeeGender" Mode="In" Type="String" />
+      <Parameter Name="EmployeeDesignation" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="spGetAllEmployees_Result">
+    <Property Type="Int32" Name="EmployeeID" Nullable="false" />
+    <Property Type="String" Name="EmployeeName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="EmployeeGender" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="EmployeeDesignation" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

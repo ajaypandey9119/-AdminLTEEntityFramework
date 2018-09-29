@@ -1,0 +1,8 @@
+E:\MindITSystems\Sample\AdminLTEMVC-CRUDOperation\BusinessLayer\bin\Debug\BusinessLayer.dll
+E:\MindITSystems\Sample\AdminLTEMVC-CRUDOperation\BusinessLayer\bin\Debug\BusinessLayer.pdb
+E:\MindITSystems\Sample\AdminLTEMVC-CRUDOperation\BusinessLayer\bin\Debug\EntityLayer.dll
+E:\MindITSystems\Sample\AdminLTEMVC-CRUDOperation\BusinessLayer\bin\Debug\EntityLayer.pdb
+E:\MindITSystems\Sample\AdminLTEMVC-CRUDOperation\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+E:\MindITSystems\Sample\AdminLTEMVC-CRUDOperation\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+E:\MindITSystems\Sample\AdminLTEMVC-CRUDOperation\BusinessLayer\obj\Debug\BusinessLayer.dll
+E:\MindITSystems\Sample\AdminLTEMVC-CRUDOperation\BusinessLayer\obj\Debug\BusinessLayer.pdb

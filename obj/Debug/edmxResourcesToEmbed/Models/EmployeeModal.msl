@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdminLTENewEntityModelStoreContainer" CdmEntityContainer="EmployeeDBModal">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="AdminLTENewEntityModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeGender" ColumnName="EmployeeGender" />
+          <ScalarProperty Name="EmployeeDesignation" ColumnName="EmployeeDesignation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spDeleteEmployee" FunctionName="AdminLTENewEntityModel.Store.spDeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="spGetAllEmployees" FunctionName="AdminLTENewEntityModel.Store.spGetAllEmployees">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AdminLTENewEntityModel.spGetAllEmployees_Result">
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
+          <ScalarProperty Name="EmployeeGender" ColumnName="EmployeeGender" />
+          <ScalarProperty Name="EmployeeDesignation" ColumnName="EmployeeDesignation" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spInsertEmployeeDetails" FunctionName="AdminLTENewEntityModel.Store.spDeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="spUpdateEmployee" FunctionName="AdminLTENewEntityModel.Store.spUpdateEmployee" />
+  </EntityContainerMapping>
+</Mapping>
